@@ -10,29 +10,21 @@ const Store = ({ products }) => {
         setIcon(icon = !icon)
     }
 
-    const list = [<div className='Store'>
-            <IconSwitch icon={icon} onSwitch={() =>onSwitch()} />
-            <ListView items={products} />
-        </div>]
-    
-    
-    const cards = 
-        [<div className='Store'>
-            <IconSwitch icon={icon} onSwitch={() => onSwitch()} />
-            <CardsView cards={products} />    
-        </div>]
 
-    let viewStore
 
     if (icon) {
-        viewStore = list;
+        return ( <div className='Store'>
+        <IconSwitch icon={icon} onSwitch={() =>onSwitch()} />
+        <ListView items={products} />
+    </div> )
     } else {
-        viewStore =cards
+        return (<div className='Store'>
+        <IconSwitch icon={icon} onSwitch={() =>onSwitch()} />
+        <CardsView cards={products} />    
+    </div>)
     }
 
-    return (
-       viewStore
-    )
+    
 }
 
 

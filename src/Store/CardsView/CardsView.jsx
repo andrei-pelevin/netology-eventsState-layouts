@@ -3,8 +3,7 @@ import ShopCard from './ShopCard/ShopCard'
 
 
 const CardsView = ({cards}) => {
-    console.log(cards)
-    
+       
 
     return (
         <div className='CardsView d-flex flex-wrap justify-content-between'>
