@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Store from './Store/Store'
 
-function App() {
+// https://fonts.google.com/icons?selected=Material%20Icons%3Aview_list
+// https://fonts.google.com/icons?selected=Material%20Icons%3Aview_module
+
+function App({products}) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Store products={products}/>
     </div>
   );
 }
