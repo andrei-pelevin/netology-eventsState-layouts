@@ -7,8 +7,6 @@ const Store = ({ products }) => {
     let [icon, setIcon] = useState(true);
     
     function onSwitch () {
-            //icon = !icon
-            console.log(icon)
         setIcon(icon = !icon)
     }
 
